@@ -2,7 +2,6 @@ import { styled } from "styled-components";
 import { Link as RouterLink } from "react-router-dom";
 
 export const Navbar = styled.div`
-  background-color: #00051d;
   width: 100vw;
   height: 80px;
   display: flex;
@@ -36,8 +35,8 @@ export const Link = styled(RouterLink)`
   text-decoration: none;
 
   &:hover {
-    border-bottom: 3px solid #000;
-    border-color: #4d69ff;
-    color: #4d69ff
+    border-bottom: 1px solid #000;
+    border-color: #6463ef;
+    color: #6463ef
   }
 `

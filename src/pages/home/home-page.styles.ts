@@ -2,7 +2,6 @@ import { styled } from "styled-components";
 
 export const HomeContainer = styled.div`
   height: 100%;
-  background-color: #00051d;
   width: 100vw;
   color: #fff;
 `;
@@ -19,6 +18,7 @@ export const LandingImage = styled.img`
   height: 400px;
   width: 400px;
   transform: rotate(30deg);
+  background-color: transparent;
 `;
 
 export const LandingPageTextContainer = styled.div`
@@ -34,7 +34,7 @@ export const PageDescription = styled.p`
 `;
 
 export const ShopNowButton = styled.button`
-  background-color: #4d69ff;
+  background-color: #6463ef;
   padding: 10px 15px;
   margin-top: 20px;
   border: none;
