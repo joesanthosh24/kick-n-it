@@ -1,13 +1,14 @@
 import { styled } from "styled-components";
 
 export const Navbar = styled.div`
-  background-color: #2e332f;
+  background-color: #f5f5f5;
   width: 100vw;
   height: 80px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #fff;
+  color: #000;
+  position: fixed;
 `;
 
 export const Title = styled.h1`
@@ -27,9 +28,9 @@ export const Link = styled.a`
   padding-bottom: 10px;
   margin: auto 20px;
   transition: border-bottom 0.2s;
+  cursor: pointer;
 
   &:hover {
-    border-bottom: 3px solid #fff;
-    cursor: pointer;
+    border-bottom: 2px solid #000;
   }
 `
