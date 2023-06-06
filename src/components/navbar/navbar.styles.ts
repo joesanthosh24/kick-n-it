@@ -1,4 +1,5 @@
 import { styled } from "styled-components";
+import { Link as RouterLink } from "react-router-dom";
 
 export const Navbar = styled.div`
   background-color: #00051d;
@@ -16,6 +17,7 @@ export const Title = styled.h1`
   font-family: 'Roboto', sans-serif;
   padding: 3px;
   color: #fff;
+  cursor: pointer;
 `
 
 export const Links = styled.div`
@@ -24,13 +26,14 @@ export const Links = styled.div`
   margin-left: 100px;
 `
 
-export const Link = styled.a`
+export const Link = styled(RouterLink)`
   padding-top: 10px;
   padding-bottom: 10px;
   margin: auto 20px;
   transition: border-bottom 0.2s, border-color 0.2s, color 0.2s;
   cursor: pointer;
   color: #fff;
+  text-decoration: none;
 
   &:hover {
     border-bottom: 3px solid #000;

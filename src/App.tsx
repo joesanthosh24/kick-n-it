@@ -1,21 +1,27 @@
 import "./App.css";
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import {
+  RouterProvider,
+  createBrowserRouter,
+  BrowserRouter,
+  Routes,
+  Route
+} from "react-router-dom";
 
 import Navbar from "./components/navbar/navbar.component";
-import HomePage from "./pages/home/home-page.component";
 
-const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <HomePage />
-  }
-])
+import HomePage from "./pages/home/home-page.component";
+import ShoesPage from "./pages/shoes/shoes-page.component";
 
 function App() {
   return (
     <div className="app">
-      <Navbar />
-      <RouterProvider router={router} />
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/shoes/:shoeBrand" element={<ShoesPage />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
