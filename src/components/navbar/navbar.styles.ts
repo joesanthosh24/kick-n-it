@@ -1,7 +1,7 @@
 import { styled } from "styled-components";
 
 export const Navbar = styled.div`
-  background-color: #f5f5f5;
+  background-color: #00051d;
   width: 100vw;
   height: 80px;
   display: flex;
@@ -15,6 +15,7 @@ export const Title = styled.h1`
   margin-left: 20px;
   font-family: 'Roboto', sans-serif;
   padding: 3px;
+  color: #fff;
 `
 
 export const Links = styled.div`
@@ -27,10 +28,13 @@ export const Link = styled.a`
   padding-top: 10px;
   padding-bottom: 10px;
   margin: auto 20px;
-  transition: border-bottom 0.2s;
+  transition: border-bottom 0.2s, border-color 0.2s, color 0.2s;
   cursor: pointer;
+  color: #fff;
 
   &:hover {
-    border-bottom: 2px solid #000;
+    border-bottom: 3px solid #000;
+    border-color: #4d69ff;
+    color: #4d69ff
   }
 `

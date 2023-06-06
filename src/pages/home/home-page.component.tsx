@@ -7,7 +7,7 @@ import {
   PageTitle,
   ShopNowButton,
 } from "./home-page.styles";
-import landingPageLogo from "../../assets/images/landing-page-image.jpg";
+import landingPageLogo from "../../assets/images/landing-page-image.png";
 
 const HomePage = () => {
   return (

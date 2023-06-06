@@ -2,28 +2,27 @@ import { styled } from "styled-components";
 
 export const HomeContainer = styled.div`
   height: 100%;
-  background-color: #f5f5f5;
+  background-color: #00051d;
   width: 100vw;
+  color: #fff;
 `;
 
 export const ImageTextContainer = styled.div`
-  position: relative;
+  display: flex;
+  justify-content: center;
+  padding-top: 100px;
+  align-items: center;
+  top: 50%;
 `;
 
 export const LandingImage = styled.img`
-  color: #2e332f;
   height: 400px;
   width: 400px;
   transform: rotate(30deg);
-  position: relative;
-  left: -100px;
-  top: 150px;
 `;
 
 export const LandingPageTextContainer = styled.div`
-  position: absolute;
-  top: 50%;
-  left: 50%;
+
 `;
 
 export const PageTitle = styled.h1`
@@ -43,7 +42,7 @@ export const ShopNowButton = styled.button`
   color: #fff;
 
   &:hover {
-    background-color: #282923;
+    background-color: #fbbb42;
     cursor: pointer;
   }
 `;
