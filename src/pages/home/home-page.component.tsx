@@ -1,4 +1,7 @@
+import { useNavigate } from "react-router-dom";
+
 import {
+  ButtonArrowIcon,
   HomeContainer,
   ImageTextContainer,
   LandingImage,
@@ -10,6 +13,8 @@ import {
 import landingPageLogo from "../../assets/images/landing-page-image.png";
 
 const HomePage = () => {
+  const navigate = useNavigate();
+
   return (
     <HomeContainer>
       <ImageTextContainer>
@@ -17,7 +22,10 @@ const HomePage = () => {
         <LandingPageTextContainer>
           <PageTitle>KICK'N IT</PageTitle>
           <PageDescription>Shop our latest Shoes</PageDescription>
-          <ShopNowButton>Shop Now  </ShopNowButton>
+          <ShopNowButton onClick={() => navigate("/shoes/jordan")}>
+            Shop Now{" "}
+            <ButtonArrowIcon className="fa-solid fa-arrow-right"></ButtonArrowIcon>
+          </ShopNowButton>
         </LandingPageTextContainer>
       </ImageTextContainer>
     </HomeContainer>

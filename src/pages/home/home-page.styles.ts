@@ -34,7 +34,7 @@ export const PageDescription = styled.p`
 `;
 
 export const ShopNowButton = styled.button`
-  background-color: #6463ef;
+  background-color: #acde49;
   padding: 10px 15px;
   margin-top: 20px;
   border: none;
@@ -42,7 +42,17 @@ export const ShopNowButton = styled.button`
   color: #fff;
 
   &:hover {
-    background-color: #fbbb42;
     cursor: pointer;
+    background-color: #fff;
+    color: #181818;
+
+    .fa-arrow-right {
+      background-color: #fff;
+    }
   }
+`;
+
+export const ButtonArrowIcon = styled.i`
+  background-color: #acde49;
+  margin-left: 4px;
 `;
