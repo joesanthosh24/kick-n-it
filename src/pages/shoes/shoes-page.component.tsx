@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 
 import {
+    FilterText,
   Filters,
   ProductsContainer,
   ShoesPageContainer,
@@ -12,8 +13,16 @@ const ShoesPage = () => {
   return (
     <ShoesPageContainer>
       <Filters>
-        <Filter filterName="Price" filterType="slider" />
-        <Filter filterName="Color" />
+        <FilterText>Filters</FilterText>
+        <Filter
+          filterName="Price"
+          filterType="slider"
+          options={{
+            min: 10,
+            max: 400,
+          }}
+        />
+        <Filter filterName="Color" filterType="checkbox" />
       </Filters>
       <ProductsContainer></ProductsContainer>
     </ShoesPageContainer>

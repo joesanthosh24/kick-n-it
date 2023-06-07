@@ -9,6 +9,7 @@ export const Navbar = styled.div`
   justify-content: center;
   color: #000;
   position: fixed;
+  background-color: #181818;
 `;
 
 export const Title = styled.h1`
