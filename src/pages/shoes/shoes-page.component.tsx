@@ -1,11 +1,23 @@
-import { useParams } from 'react-router-dom';
+import { useParams } from "react-router-dom";
 
-import { ShoesPageContainer } from "./shoes-page.styles";
+import {
+  Filters,
+  ProductsContainer,
+  ShoesPageContainer,
+} from "./shoes-page.styles";
+
+import Filter from "../../components/filter/filter.component";
 
 const ShoesPage = () => {
-  const { shoeBrand } = useParams();
-
-  return <ShoesPageContainer>Shoes Page for Brand: {shoeBrand}</ShoesPageContainer>;
+  return (
+    <ShoesPageContainer>
+      <Filters>
+        <Filter filterName="Price" filterType="slider" />
+        <Filter filterName="Color" />
+      </Filters>
+      <ProductsContainer></ProductsContainer>
+    </ShoesPageContainer>
+  );
 };
 
 export default ShoesPage;
