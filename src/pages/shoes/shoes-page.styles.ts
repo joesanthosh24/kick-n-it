@@ -80,3 +80,24 @@ export const ColorCircle = styled.div`
   margin-left: 5px;
   cursor: pointer;
 `;
+
+export const Price = styled.div`
+  margin-left: auto;
+  
+  > p {
+    color: #8d8a8c;
+  }
+`;
+
+export const AddToCartButton = styled.div`
+  width: 100%;
+  height: 35px;
+  border-radius: 17px;
+  background-color: #acde49;
+  cursor: pointer;
+
+  >p {
+    text-align: center;
+    padding: 8px;
+  }
+`;

@@ -1,20 +1,22 @@
 import { useParams } from "react-router-dom";
 
-import ShoeImage from '../../assets/images/shoe_image.webp';
+import ShoeImage from "../../assets/images/shoe_image.webp";
 
 import {
   Card,
-    CardContent,
-    CardDescription,
-    CardImage,
-    CardTitle,
-    ColorCircle,
-    ColorCircleContainer,
-    ColorSelection,
-    FilterText,
+  CardContent,
+  CardDescription,
+  CardImage,
+  CardTitle,
+  ColorCircle,
+  ColorCircleContainer,
+  ColorSelection,
+  FilterText,
   Filters,
+  Price,
   ProductsContainer,
   ShoesPageContainer,
+  AddToCartButton,
 } from "./shoes-page.styles";
 
 import Filter from "../../components/filter/filter.component";
@@ -51,7 +53,13 @@ const ShoesPage = () => {
               <ColorCircle backgroundColor="red"></ColorCircle>
               <ColorCircle backgroundColor="blue"></ColorCircle>
             </ColorCircleContainer>
+            <Price>
+              <p>$ 134.00</p>
+            </Price>
           </ColorSelection>
+          <AddToCartButton>
+            <p>Add To Cart</p>
+          </AddToCartButton>
         </Card>
       </ProductsContainer>
     </ShoesPageContainer>
