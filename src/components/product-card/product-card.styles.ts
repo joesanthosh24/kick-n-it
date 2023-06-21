@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const Card = styled.div`
+  cursor: pointer;
   display: flex;
   flex-direction: column;
   border: lpx solid #ccc;
@@ -9,6 +10,7 @@ export const Card = styled.div`
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   background-color: #fff;
   max-width: 240px;
+  max-height: 300px;
   margin: 10px;
   font-family: "Roboto", sans-serif;
   padding: 18px;
@@ -51,7 +53,7 @@ export const ColorCircle = styled.div`
   width: 12px;
   background-color: ${(props) =>
     props.backgroundColor ? props.backgroundColor : "gray"};
-  border-radius: 50%;
+  border-radius: 100%;
   margin-left: 5px;
   cursor: pointer;
 `;
@@ -68,11 +70,18 @@ export const AddToCartButton = styled.div`
   width: 100%;
   height: 35px;
   border-radius: 17px;
-  background-color: #acde49;
+  background: linear-gradient(to right, #acde49, #588204);
   cursor: pointer;
 
   > p {
     text-align: center;
     padding: 8px;
+    font-weight: bold;
+    color: #fff;
+  }
+
+  :hover {
+    background: linear-gradient(to right, #f5e942, #9c920c);
+    border-radius: 17px;
   }
 `;

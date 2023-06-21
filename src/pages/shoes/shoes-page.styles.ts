@@ -24,4 +24,5 @@ export const ProductsContainer = styled.div`
   flex: 5;
   background-color: transparent;
   margin-left: 5px;
+  display: flex;
 `;
