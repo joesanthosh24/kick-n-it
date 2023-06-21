@@ -1,5 +1,5 @@
 import ShoeImage from "../../assets/images/shoe_image.webp";
-import ShoeImage2 from '../../assets/images/shoe_image2.webp';
+import ShoeImage2 from "../../assets/images/shoe_image2.webp";
 
 import Card from "../../components/product-card/product-card.component";
 
@@ -25,7 +25,25 @@ const ShoesPage = () => {
             max: 400,
           }}
         />
-        <Filter filterName="Color" filterType="checkbox" />
+        <Filter
+          filterName="Color"
+          filterType="colors"
+          options={{
+            values: [
+              "red",
+              "green",
+              "orange",
+              "blue",
+              "violet",
+              "purple",
+              "black",
+              "yellow",
+              "pink",
+              "crimson",
+              "brown"
+            ],
+          }}
+        />
       </Filters>
       <ProductsContainer>
         <Card
