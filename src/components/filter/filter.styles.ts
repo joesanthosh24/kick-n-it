@@ -8,6 +8,7 @@ export const FilterContainer = styled.div`
   flex-direction: column;
   align-items: flex-start;
   margin-bottom: 10px;
+  border-radius: 15px;
 `;
 
 export const FilterName = styled.p`

@@ -1,0 +1,29 @@
+.customSlider {
+    width: 100%;
+    margin: auto;
+    margin-left: 0px;
+}
+
+.customSlider-track {
+    top: 8px;
+    height: 4px;
+    background: #e2e8d5;
+}
+
+.customSlider-track.customSlider-track-0 {
+    background: #acde49;
+}
+
+.customSlider-thumb {
+    cursor: pointer;
+    background: #acde49;
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    outline: none;
+    top: 6px;
+}
+
+.customSlider-thumb:hover {
+    box-shadow: 0 0 0 5px rgb(172, 222, 73, 0.2);
+}

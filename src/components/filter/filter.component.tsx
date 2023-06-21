@@ -1,8 +1,7 @@
 import { useState } from "react";
-import ReactSlider from "react-slider";
 
 import { FilterContainer, FilterName, SliderValue } from "./filter.styles";
-import "./filter.styles.css";
+import SliderFilter from "./slider-filter/slider-filter.component";
 
 interface FilterComponentProps {
   filterType?: "checkbox" | "slider";
@@ -15,8 +14,14 @@ interface FilterComponentProps {
 }
 
 const Filter = (filterProps: FilterComponentProps) => {
-  const [sliderVal, setSliderVal] = useState(
-    filterProps.options && filterProps.options.min ? filterProps.options.min : 0
+  const [val, setVal] = useState(
+    filterProps.options && filterProps.options.min
+      ? filterProps.options.min
+      : filterProps.options &&
+        filterProps.options.values &&
+        filterProps.options.values.length
+      ? filterProps.options.values[0]
+      : 0
   );
 
   const { filterName, filterType } = filterProps;
@@ -25,10 +30,7 @@ const Filter = (filterProps: FilterComponentProps) => {
       <FilterName>{filterName}</FilterName>
       {filterType && filterType === "slider" ? (
         <>
-          <ReactSlider
-            className="customSlider"
-            trackClassName="customSlider-track"
-            thumbClassName="customSlider-thumb"
+          <SliderFilter
             min={
               filterProps.options && filterProps.options.min
                 ? filterProps.options.min
@@ -39,10 +41,10 @@ const Filter = (filterProps: FilterComponentProps) => {
                 ? filterProps.options.max
                 : 0
             }
-            value={sliderVal}
-            onChange={(val) => setSliderVal(val)}
+            sliderVal={val}
+            setSliderVal={setVal}
           />
-          <SliderValue>Max: ${sliderVal}</SliderValue>
+          <SliderValue>Max: ${val}</SliderValue>
         </>
       ) : (
         ""
