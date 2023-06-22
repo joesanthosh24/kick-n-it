@@ -40,4 +40,38 @@ export const Link = styled(RouterLink)`
     border-color: #6463ef;
     color: #6463ef
   }
-`
+`;
+
+export const ShoppingCartLink = styled(RouterLink)`
+  padding-top: 10px;
+  padding-bottom: 10px;
+  cursor: pointer;
+  color: #ff;
+  margin-left: 40px;
+  text-decoration: none;
+  position: relative;
+
+  &:hover {
+    border: none;
+  }
+`;
+
+export const ShoppingCartIcon = styled.i`
+  color: #fff;
+  font-size: 30px;
+`;
+
+export const CartItems = styled.div`
+  height: 20px;
+  width: 20px;
+  border-radius: 100%;
+  background-color: #db0f2e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  font-size: 10px;
+  color: #fff;
+  bottom: 29px;
+  left: 29px;
+`;
