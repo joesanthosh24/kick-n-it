@@ -1,4 +1,4 @@
-import { CartItems, Link, Links, Navbar, ShoppingBagIcon, ShoppingBagLink, Title } from "./navbar.styles";
+import { CartItems, Link, Links, Navbar, ShoppingCartIcon, ShoppingCartLink, Title } from "./navbar.styles";
 import { useNavigate } from "react-router-dom";
 
 const NavbarComponent = () => {
@@ -15,10 +15,10 @@ const NavbarComponent = () => {
         <Link to="/shoes/puma">PUMA</Link>
         <Link to="/shoes/vans">Vans</Link>
         <Link to="/shoes/converse">Converse</Link>
-        <ShoppingBagLink to="/cart">
-          <ShoppingBagIcon className="fa-solid fa-cart-shopping"></ShoppingBagIcon>
+        <ShoppingCartLink to="/cart">
+          <ShoppingCartIcon className="fa-solid fa-cart-shopping"></ShoppingCartIcon>
           <CartItems><span>1</span></CartItems>
-        </ShoppingBagLink>
+        </ShoppingCartLink>
       </Links>
     </Navbar>
   );

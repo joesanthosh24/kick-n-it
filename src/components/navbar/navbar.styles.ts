@@ -42,7 +42,7 @@ export const Link = styled(RouterLink)`
   }
 `;
 
-export const ShoppingBagLink = styled(RouterLink)`
+export const ShoppingCartLink = styled(RouterLink)`
   padding-top: 10px;
   padding-bottom: 10px;
   cursor: pointer;
@@ -56,7 +56,7 @@ export const ShoppingBagLink = styled(RouterLink)`
   }
 `;
 
-export const ShoppingBagIcon = styled.i`
+export const ShoppingCartIcon = styled.i`
   color: #fff;
   font-size: 30px;
 `;
@@ -72,6 +72,6 @@ export const CartItems = styled.div`
   position: absolute;
   font-size: 10px;
   color: #fff;
-  bottom: 10px;
-  left: 10px;
+  bottom: 29px;
+  left: 29px;
 `;
