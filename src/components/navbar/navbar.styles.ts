@@ -49,6 +49,7 @@ export const ShoppingBagLink = styled(RouterLink)`
   color: #ff;
   margin-left: 40px;
   text-decoration: none;
+  position: relative;
 
   &:hover {
     border: none;
@@ -57,4 +58,20 @@ export const ShoppingBagLink = styled(RouterLink)`
 
 export const ShoppingBagIcon = styled.i`
   color: #fff;
+  font-size: 30px;
+`;
+
+export const CartItems = styled.div`
+  height: 20px;
+  width: 20px;
+  border-radius: 100%;
+  background-color: #db0f2e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  font-size: 10px;
+  color: #fff;
+  bottom: 10px;
+  left: 10px;
 `;
