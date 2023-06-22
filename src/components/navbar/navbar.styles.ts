@@ -40,4 +40,21 @@ export const Link = styled(RouterLink)`
     border-color: #6463ef;
     color: #6463ef
   }
-`
+`;
+
+export const ShoppingBagLink = styled(RouterLink)`
+  padding-top: 10px;
+  padding-bottom: 10px;
+  cursor: pointer;
+  color: #ff;
+  margin-left: 40px;
+  text-decoration: none;
+
+  &:hover {
+    border: none;
+  }
+`;
+
+export const ShoppingBagIcon = styled.i`
+  color: #fff;
+`;
