@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 import {
   CartItems,
@@ -11,10 +12,12 @@ import {
   Title,
 } from "./navbar.styles";
 
+import { selectTotalCartItems } from "../../state/cart/selectors";
+
 const NavbarComponent = () => {
-  useEffect(() => {
-    
-  }, []);
+  const totalItems = useSelector(selectTotalCartItems);
+
+  useEffect(() => {}, []);
 
   const navigate = useNavigate();
 
@@ -32,7 +35,7 @@ const NavbarComponent = () => {
         <ShoppingCartLink to="/cart">
           <ShoppingCartIcon className="fa-solid fa-cart-shopping"></ShoppingCartIcon>
           <CartItems>
-            <span>1</span>
+            <span>{totalItems}</span>
           </CartItems>
         </ShoppingCartLink>
       </Links>
