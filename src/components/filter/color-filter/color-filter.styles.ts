@@ -10,6 +10,6 @@ export const Color = styled.div`
   width: 20px;
   border-radius: 100%;
   margin: 10px 10px 10px 0;
-  background-color: ${props => props.backgroundColor ? props.backgroundColor: 'gray'};
+  background-color: ${props => props.backgroundcolor ? props.backgroundcolor: 'gray'};
   cursor: pointer;
 `;

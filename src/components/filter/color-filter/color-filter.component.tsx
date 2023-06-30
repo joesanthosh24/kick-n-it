@@ -11,7 +11,11 @@ const ColorFilter = (filterProps: ColorFilterProps) => {
   return (
     <ColorFilterContainer>
       {values.map((value) => (
-        <Color backgroundColor={value} onClick={() => setColor(value)}></Color>
+        <Color
+          backgroundcolor={value}
+          key={value}
+          onClick={() => setColor(value)}
+        ></Color>
       ))}
     </ColorFilterContainer>
   );

@@ -52,7 +52,7 @@ export const ColorCircle = styled.div`
   height: 12px;
   width: 12px;
   background-color: ${(props) =>
-    props.backgroundColor ? props.backgroundColor : "gray"};
+    props.backgroundcolor ? props.backgroundcolor : "gray"};
   border-radius: 100%;
   margin-left: 5px;
   cursor: pointer;

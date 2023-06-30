@@ -1,3 +1,5 @@
+import { useDispatch } from "react-redux";
+
 import ShoeImage from "../../assets/images/shoe_image.webp";
 import ShoeImage2 from "../../assets/images/shoe_image2.webp";
 
@@ -11,8 +13,15 @@ import {
 } from "./shoes-page.styles";
 
 import Filter from "../../components/filter/filter.component";
+import { addToCartAction } from "../../state/cart/actions";
 
 const ShoesPage = () => {
+  const dispatch = useDispatch();
+
+  const addToCart = (item: any) => {
+    dispatch(addToCartAction(item));
+  };
+
   return (
     <ShoesPageContainer>
       <Filters>
@@ -40,7 +49,7 @@ const ShoesPage = () => {
               "yellow",
               "pink",
               "crimson",
-              "brown"
+              "brown",
             ],
           }}
         />
@@ -52,6 +61,7 @@ const ShoesPage = () => {
           description="Men's gym Red/White/Black"
           circleColors={["black", "gray", "red", "blue"]}
           price="134.99"
+          addClicked={addToCart}
         />
         <Card
           image={ShoeImage2}
@@ -59,6 +69,7 @@ const ShoesPage = () => {
           description="Men's Black/Red/White"
           circleColors={["black", "blue", "gray"]}
           price="134.99"
+          addClicked={addToCart}
         />
       </ProductsContainer>
     </ShoesPageContainer>

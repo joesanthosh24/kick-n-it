@@ -17,10 +17,11 @@ interface ProductCardProps {
   description: string;
   price: string;
   circleColors?: string[];
+  addClicked?: (item: any) => any;
 }
 
 const ProductCard = (cardProps: ProductCardProps) => {
-  const { title, description, price } = cardProps;
+  const { title, description, price, addClicked } = cardProps;
   return (
     <Card>
       <div>{cardProps.image && <CardImage src={cardProps.image} />}</div>
@@ -33,16 +34,22 @@ const ProductCard = (cardProps: ProductCardProps) => {
         <ColorCircleContainer>
           {cardProps.circleColors &&
             cardProps.circleColors.map((color) => (
-              <ColorCircle backgroundColor={color}></ColorCircle>
+              <ColorCircle backgroundcolor={color} key={color}></ColorCircle>
             ))}
         </ColorCircleContainer>
         <Price>
           <p>$ {price}</p>
         </Price>
       </ColorSelection>
-      <AddToCartButton>
-        <p>Add To Cart</p>
-      </AddToCartButton>
+      {addClicked && (
+        <AddToCartButton
+          onClick={() =>
+            addClicked({ title, description, price, image: cardProps.image })
+          }
+        >
+          <p>Add To Cart</p>
+        </AddToCartButton>
+      )}
     </Card>
   );
 };
